@@ -15,7 +15,7 @@ const FLAT_SCALE = [
   "Ab",
   "A",
   "Bb",
-  "Cb",
+  "B",
 ];
 
 // Chromatic scale starting from C using sharps only.

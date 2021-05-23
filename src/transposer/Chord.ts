@@ -23,7 +23,7 @@ export const CHORD_RANKS: Map<string, number> = new Map([
   ["A", 9],
   ["A#", 10],
   ["Bb", 10],
-  ["Cb", 11],
+  ["B", 11],
   ["B", 11],
 ]);
 

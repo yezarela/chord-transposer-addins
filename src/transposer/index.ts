@@ -129,11 +129,12 @@ function tokenize(text: string, threshold?: number): Token[][] {
         lastTokenWasString = true;
       }
     }
-    if (chordCount / tokenCount >= threshold) {
-      newText.push(newLine);
-    } else {
-      newText.push([line]);
-    }
+
+    // if (chordCount / tokenCount >= threshold) {
+    newText.push(newLine);
+    // } else {
+    //   newText.push([line]);
+    // }
   }
   return newText;
 }
@@ -156,9 +157,10 @@ function transposeTokens(
         if (spaceDebt > 0) {
           const numSpaces = token.search(/\S|$/);
           // Keep at least one space.
-          const spacesToTake = Math.min(spaceDebt, numSpaces, token.length - 1);
-          const truncatedToken = token.substring(spacesToTake);
-          accumulator.push(truncatedToken);
+        //   const spacesToTake = Math.min(spaceDebt, numSpaces, token.length - 1);
+        //   const truncatedToken = token.substring(spacesToTake);
+        //   accumulator.push(truncatedToken);
+          accumulator.push(token);
           spaceDebt = 0;
         } else if (typeof accumulator[accumulator.length - 1] === "string") {
           accumulator.push(accumulator.pop() + token);
@@ -178,7 +180,7 @@ function transposeTokens(
           // Pad right with spaces.
           accumulator.push(transposedChord);
           if (i < line.length - 1) {
-            accumulator.push(" ".repeat(originalChordLen - transposedChordLen));
+            accumulator.push("".repeat(originalChordLen - transposedChordLen));
           }
         } else if (originalChordLen < transposedChordLen) {
           // Remove spaces from the right (if possible).

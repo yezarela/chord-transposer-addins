@@ -1,3 +1,5 @@
+// Customized from: https://github.com/ddycai/chord-transposer
+
 import { Enum, EnumValue } from 'ts-enums'
 import { Chord, MINOR_PATTERN, ROOT_PATTERN } from './Chord';
 import * as XRegExp from 'xregexp';

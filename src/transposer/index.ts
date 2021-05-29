@@ -1,3 +1,5 @@
+// Customized from: https://github.com/ddycai/chord-transposer
+
 import {
   KeySignatures,
   KeySignature,

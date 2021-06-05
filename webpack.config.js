@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const urlDev="https://localhost:3000/";
-const urlProd="http://chord-transposer-addins.web.app/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
+const urlProd="https://chord-transposer-addins.web.app/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
 
 module.exports = async (env, options) => {
   const dev = options.mode === "development";
